@@ -6,7 +6,7 @@ window.onload = function () {
 
     // This is the last element reproducing its animation
     fromTextEl.addEventListener("animationend", function() {
-        console.log('Animations ended');
+        // console.log('Animations ended');
         let introText = "Estas cordialmente invitada a pasar 2 dias y 1 noche de descanso en el lujoso Spa Terapéutico Integral:\n\n";
         let name = "<b>Casa Arboleda!!!</b>"
         let finalText = "\n\nPara redimirlos, por favor dirigete a la oficina de osito e indica la fecha en la que te gustaria ir!"
