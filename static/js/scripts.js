@@ -12,12 +12,12 @@ window.onload = function () {
     playButtonEl.addEventListener("click", onButtonClick);
 
     function onButtonClick() {
-        console.log('Button was clicked');
+        // console.log('Button was clicked');
         showPage();
         musicEl.play().then(() => {
-            console.log('I was able to play music');
+            // console.log('I was able to play music');
         }).catch(() => {
-            console.log('I was NOT able to play music');
+            // console.log('I was NOT able to play music');
         });
     }
 
@@ -35,7 +35,7 @@ window.onload = function () {
         let finalText = "\n\nPara redimirlos, por favor dirigete a la oficina de Osito e indica la fecha en la que te gustaria ir!"
         let miaw = '\n\n<span id="miaw">😺😸</span>';
         let index = 0;
-        let speed = (1000/60) * 3;
+        let speed = (1000/60) * 4;
         let intervalID = setInterval(() => {
             if(index < introText.length) {    
                 cardTextEl.innerHTML += introText[index];
