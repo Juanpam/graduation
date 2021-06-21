@@ -3,8 +3,6 @@ window.onload = function () {
     fromTextEl = document.getElementById('fromText');
     recipientEl = document.getElementById('recipient');
     cardTextEl = document.getElementById('card-text');
-    musicEl = document.getElementById('music');
-    musicEl.currentTime = 58;
     playButtonEl = document.getElementById('playButton');
 
     document.body.classList.add('stopped');
@@ -14,11 +12,11 @@ window.onload = function () {
     function onButtonClick() {
         // console.log('Button was clicked');
         showPage();
-        musicEl.play().then(() => {
-            // console.log('I was able to play music');
-        }).catch(() => {
-            // console.log('I was NOT able to play music');
-        });
+        // videoEl.play().then(() => {
+        //     console.log('I was able to play ´');
+        // }).catch(() => {
+        //     // console.log('I was NOT able to play music');
+        // });
     }
 
     function showPage() {
@@ -30,12 +28,12 @@ window.onload = function () {
     // This is the last element reproducing its animation
     fromTextEl.addEventListener("animationend", function() {
         // console.log('Animations ended');
-        let introText = "Estas cordialmente invitada a pasar 2 dias y 1 noche de descanso en el lujoso Spa Terapéutico Integral:\n\n";
-        let name = "<b>Casa Arboleda!!!</b>"
-        let finalText = "\n\nPara redimirlos, por favor dirigete a la oficina de Osito e indica la fecha en la que te gustaria ir!"
-        let miaw = '\n\n<span id="miaw">😺😸</span>';
+        let introText = "Por medio de la presente queremos felicitar a una persona muy especial para nosotros:\n\n";
+        let name = "<b>Marcelona!!!</b>"
+        let finalText = "\n\nA continuación, algunas palabras..."
+        let miaw = '\n\n<video id="video" controls><source src="static/congrats.mp4" type="video/mp4"></video>';
         let index = 0;
-        let speed = (1000/60) * 4;
+        let speed = (1000/60) * 5;
         let intervalID = setInterval(() => {
             if(index < introText.length) {    
                 cardTextEl.innerHTML += introText[index];
@@ -51,6 +49,9 @@ window.onload = function () {
                     } else {
                         clearInterval(intervalID);
                         cardTextEl.innerHTML += miaw;
+                        videoEl = document.getElementById('video');
+                        videoEl.currentTime = 5;
+                        videoEl.play().then(() => console.log())
                     }
                 }, speed);
             }
